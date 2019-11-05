@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.greenButton = new System.Windows.Forms.Button();
             this.redButton = new System.Windows.Forms.Button();
@@ -46,9 +47,8 @@
             this.pos2 = new System.Windows.Forms.PictureBox();
             this.ifLbl = new System.Windows.Forms.Label();
             this.sceneLabel = new System.Windows.Forms.Label();
-            this.chooseLabel = new System.Windows.Forms.Label();
             this.promptLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iconDisplay = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pos1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pos11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pos10)).BeginInit();
@@ -60,7 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pos4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pos3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pos2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconDisplay)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,32 +74,35 @@
             // greenButton
             // 
             this.greenButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.greenButton.Enabled = false;
+            this.greenButton.Font = new System.Drawing.Font("Raleigh Lt BT", 12F);
             this.greenButton.Location = new System.Drawing.Point(144, 173);
             this.greenButton.Name = "greenButton";
             this.greenButton.Size = new System.Drawing.Size(75, 166);
             this.greenButton.TabIndex = 1;
             this.greenButton.UseVisualStyleBackColor = false;
-            this.greenButton.Click += new System.EventHandler(this.GreenButton_Click);
             // 
             // redButton
             // 
             this.redButton.BackColor = System.Drawing.Color.DarkRed;
+            this.redButton.Enabled = false;
+            this.redButton.Font = new System.Drawing.Font("Raleigh Lt BT", 12F);
             this.redButton.Location = new System.Drawing.Point(293, 173);
             this.redButton.Name = "redButton";
             this.redButton.Size = new System.Drawing.Size(75, 166);
             this.redButton.TabIndex = 2;
             this.redButton.UseVisualStyleBackColor = false;
-            this.redButton.Click += new System.EventHandler(this.RedButton_Click);
             // 
             // blueButton
             // 
             this.blueButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.blueButton.Enabled = false;
+            this.blueButton.Font = new System.Drawing.Font("Raleigh Lt BT", 12F);
             this.blueButton.Location = new System.Drawing.Point(445, 173);
             this.blueButton.Name = "blueButton";
             this.blueButton.Size = new System.Drawing.Size(75, 166);
             this.blueButton.TabIndex = 3;
             this.blueButton.UseVisualStyleBackColor = false;
-            this.blueButton.Click += new System.EventHandler(this.BlueButton_Click);
             // 
             // label2
             // 
@@ -225,7 +228,7 @@
             // 
             this.ifLbl.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ifLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ifLbl.Location = new System.Drawing.Point(572, 95);
+            this.ifLbl.Location = new System.Drawing.Point(506, 86);
             this.ifLbl.Name = "ifLbl";
             this.ifLbl.Size = new System.Drawing.Size(73, 65);
             this.ifLbl.TabIndex = 16;
@@ -234,25 +237,14 @@
             // sceneLabel
             // 
             this.sceneLabel.BackColor = System.Drawing.Color.DimGray;
-            this.sceneLabel.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sceneLabel.Location = new System.Drawing.Point(160, 345);
+            this.sceneLabel.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold);
+            this.sceneLabel.Location = new System.Drawing.Point(160, 342);
             this.sceneLabel.Name = "sceneLabel";
-            this.sceneLabel.Size = new System.Drawing.Size(363, 115);
+            this.sceneLabel.Size = new System.Drawing.Size(505, 110);
             this.sceneLabel.TabIndex = 17;
             this.sceneLabel.Text = "You awake in a strange room. You hear distant foot steps, you must choose a door " +
     "to go through.";
-            this.sceneLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // chooseLabel
-            // 
-            this.chooseLabel.BackColor = System.Drawing.Color.DimGray;
-            this.chooseLabel.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chooseLabel.Location = new System.Drawing.Point(556, 358);
-            this.chooseLabel.Name = "chooseLabel";
-            this.chooseLabel.Size = new System.Drawing.Size(104, 66);
-            this.chooseLabel.TabIndex = 18;
-            this.chooseLabel.Text = "Click on a door to choose.";
-            this.chooseLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.sceneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // promptLabel
             // 
@@ -262,18 +254,18 @@
             this.promptLabel.Name = "promptLabel";
             this.promptLabel.Size = new System.Drawing.Size(193, 72);
             this.promptLabel.TabIndex = 19;
-            this.promptLabel.Text = "Prompts will appear here.";
+            this.promptLabel.Text = "Press \'Space\' for green door, \'M\' for red door, and \'B\' for blue door.";
             this.promptLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // iconDisplay
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DimGray;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 345);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.iconDisplay.BackColor = System.Drawing.Color.DimGray;
+            this.iconDisplay.Location = new System.Drawing.Point(12, 345);
+            this.iconDisplay.Name = "iconDisplay";
+            this.iconDisplay.Size = new System.Drawing.Size(135, 93);
+            this.iconDisplay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconDisplay.TabIndex = 20;
+            this.iconDisplay.TabStop = false;
             // 
             // Form1
             // 
@@ -281,9 +273,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(672, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.iconDisplay);
             this.Controls.Add(this.promptLabel);
-            this.Controls.Add(this.chooseLabel);
             this.Controls.Add(this.sceneLabel);
             this.Controls.Add(this.ifLbl);
             this.Controls.Add(this.pos1);
@@ -302,9 +293,12 @@
             this.Controls.Add(this.redButton);
             this.Controls.Add(this.greenButton);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "                                                                                 " +
-    "                                                                          ";
+            this.Text = "Escape Simulator                                                                 " +
+    "                                                                                " +
+    "  ";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pos1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pos11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pos10)).EndInit();
@@ -316,7 +310,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pos4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pos3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pos2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconDisplay)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,7 +337,7 @@
         private System.Windows.Forms.Label sceneLabel;
         private System.Windows.Forms.Label chooseLabel;
         private System.Windows.Forms.Label promptLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox iconDisplay;
     }
 }
 

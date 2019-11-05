@@ -59,18 +59,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -88,6 +88,87 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\runningguy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snakeicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloodicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloodicon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waterphone-daniel_simon.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incoming_Suspense-Maximilien_-1060577487.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bomb-SoundBible.com-891110113 %281%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamond Back Rattle Snake-SoundBible.com-332665391.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Opening Casket-SoundBible.com-1012554358.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\death-Roman_K-1190383229.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strange_Days-Mike_Koenig-176042049.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sqeaking_door-Sarasprella-1653672487.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smileyface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grenadeicon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dog Growl Then Bark-SoundBible.com-224495057.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sunny Day-SoundBible.com-2064222612.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Math.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vibe Check.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surprisedicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Psycho Scream-SoundBible.com-1441943673.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
