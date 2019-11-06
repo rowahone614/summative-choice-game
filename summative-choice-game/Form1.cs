@@ -537,7 +537,7 @@ namespace summative_choice_game
             }
             if (e.KeyCode == Keys.B)
             {
-                //Scene and Plot Locations for Blue Door
+                //Scene and Plot Locations for Blue Door.
                 if (scene == 0) { scene = 3; }
                 else if (scene == 3) { scene = 5; }
                 else if (scene == 5) { scene = 6; }
